@@ -27,4 +27,18 @@ func main() {
 
 	myMap2["me"] = me
 	log.Println(myMap2["me"].FirstName)
+
+	var mySlice []string
+
+	mySlice = append(mySlice, "Trevor")
+	mySlice = append(mySlice, "John")
+	mySlice = append(mySlice, "mary")
+
+	log.Println(mySlice)
+
+	//another way to declare an slice(arry in golang)
+
+	numbers := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+	log.Println(numbers)
 }
