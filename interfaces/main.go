@@ -34,6 +34,14 @@ func main() {
 	}
 
 	PrintInfo(&gorila)
+
+	fmt.Println(dog)
+	dog.ChangeName()
+	fmt.Println(dog)
+}
+
+func (d *Dog) ChangeName() {
+	d.Name = "Carlita"
 }
 
 func PrintInfo(a Animal) {
