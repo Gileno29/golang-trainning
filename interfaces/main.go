@@ -25,7 +25,7 @@ func main() {
 		Name:  "Samson",
 		Breed: "German Shephered",
 	}
-	PrintInfo(dog)
+	PrintInfo(&dog)
 
 	gorila := Gorilla{
 		Name:          "Camila",
@@ -33,25 +33,25 @@ func main() {
 		NumberOfTeeth: 3,
 	}
 
-	PrintInfo(gorila)
+	PrintInfo(&gorila)
 }
 
 func PrintInfo(a Animal) {
 	fmt.Println("This animal Says", a.Says(), "and has", a.NumberOfLegs(), "Legs")
 }
 
-func (d Dog) Says() string {
+func (d *Dog) Says() string {
 	return "woof"
 }
 
-func (d Dog) NumberOfLegs() int {
+func (d *Dog) NumberOfLegs() int {
 	return 4
 }
 
-func (g Gorilla) Says() string {
+func (g *Gorilla) Says() string {
 	return "ulala"
 }
 
-func (g Gorilla) NumberOfLegs() int {
+func (g *Gorilla) NumberOfLegs() int {
 	return 2
 }
