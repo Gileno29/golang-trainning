@@ -9,11 +9,11 @@ func CalculateValue(intChan chan int) {
 	intChan <- randomNumber
 }
 
-func main() {
+/*func main() {
 	intChan := make(chan int)
 	defer close(intChan)
 	go CalculateValue(intChan)
 	num := <-intChan
 
 	println(num)
-}
+}*/
